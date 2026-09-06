@@ -408,3 +408,97 @@ fun PreviewControlesAvanzados() {
         ControlesAvanzadosCompose()
     }
 }
+
+@Composable
+fun TarjetaPresentacion() {
+
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = Color(0xFFDDF4DD)
+    ) {
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(20.dp),
+
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+
+
+            Image(
+                painter = painterResource(
+                    id = R.drawable.android_logo
+                ),
+                contentDescription = "Logo Android",
+                modifier = Modifier.size(120.dp)
+            )
+
+
+            Spacer(
+                modifier = Modifier.height(20.dp)
+            )
+
+
+            Text(
+                text = "Jennifer Doe",
+                fontSize = 32.sp,
+                fontWeight = FontWeight.Bold
+            )
+
+
+            Text(
+                text = "Android Developer Extraordinaire",
+                fontSize = 18.sp
+            )
+
+
+            Spacer(
+                modifier = Modifier.height(40.dp)
+            )
+
+
+            Text(
+                text = "☎ +11 (123) 444 555 666",
+                fontSize = 16.sp
+            )
+
+
+            Spacer(
+                modifier = Modifier.height(15.dp)
+            )
+
+
+            Text(
+                text = "@AndroidDev",
+                fontSize = 16.sp
+            )
+
+
+            Spacer(
+                modifier = Modifier.height(15.dp)
+            )
+
+
+            Text(
+                text = "✉ jen.doe@android.com",
+                fontSize = 16.sp
+            )
+
+        }
+    }
+}
+
+
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewTarjetaPresentacion(){
+
+    BienvenidoAlCursoTheme {
+
+        TarjetaPresentacion()
+
+    }
+}
